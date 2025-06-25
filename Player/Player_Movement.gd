@@ -21,7 +21,7 @@ var isJumping = false
 var canWalk = true
 var isWalking = false
 
-var canDash = true
+var dashCount = 1
 var isDashing = false
 var dashLeft = 0 #variable to track dash distance measured in ms
 var dashDir = Vector2(0, 0) #direction dash was started in
@@ -56,8 +56,8 @@ func calculateYVelocity(delta: float) -> void:
 			velocity.y += gravity * 1.75 * delta		
 			
 	else:
-		if not canDash:
-			canDash = true
+		if dashCount == 0:
+			dashCount = 1
 		if isJumping:
 			isJumping = false
 		if is_on_floor() and Input.is_action_just_pressed("ui_accept"):
@@ -67,7 +67,7 @@ func calculateYVelocity(delta: float) -> void:
 func calculateHorizontalVelocity(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("ui_accept") and velocity.y > -(jumpPower - 50):
-		if canDash:
+		if dashCount > 0:
 			dashLeft = dashTime 
 			
 			var xDirection = Input.get_axis("ui_left", "ui_right")
@@ -76,6 +76,7 @@ func calculateHorizontalVelocity(delta: float) -> void:
 			if xDirection == 0:
 				xDirection = prevDir
 			dashDir = Vector2(xDirection, yDirection)
+			dashCount -= 1
 		
 	if dashLeft > 0:
 		dashLeft -= delta
@@ -85,7 +86,6 @@ func calculateHorizontalVelocity(delta: float) -> void:
 		if(dashLeft <= 0):
 			if velocity.y != 0:
 				velocity.y = 0
-				canDash = false
 	
 	else:
 		var xDirection = Input.get_axis("ui_left", "ui_right")
