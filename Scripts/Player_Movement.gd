@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 const maxSpeed = 500
-const accelRate = 800
-const deccelRate = 1000
+const accelRate = 75
+const deccelRate = 60
 #allows us to check if player wants to pivot
 #add a boost so you don't lose all momentum
 var prevDir = 0 
@@ -28,7 +28,7 @@ var isDashing = false
 var dashLeft = 0 #variable to track dash distance measured in ms
 var dashDir = Vector2(0, 0) #direction dash was started in
 const dashTime = .2 #time dash takes
-const dashVelocity = 1000
+const dashVelocity = 800
 
 var canDash = true
 
@@ -48,7 +48,7 @@ func calculateYVelocity(delta: float) -> void:
 			
 			#if holding jump for longer add multiplier to jump
 			if Input.is_action_pressed("ui_accept"):
-				gravityCoeffecient = 1
+				gravityCoeffecient = 1.1
 			else:
 				gravityCoeffecient = 1.75
 				
@@ -69,7 +69,7 @@ func calculateYVelocity(delta: float) -> void:
 			coyoteTime = .3
 	if coyoteTime > 0 and Input.is_action_just_pressed("ui_accept"):
 		isJumping = true
-		dashBuffer = .3
+		dashBuffer = .1
 		coyoteTime = 0
 		velocity.y -= jumpPower
 
@@ -77,10 +77,11 @@ func calculateHorizontalVelocity(delta: float) -> void:
 	if dashBuffer > 0:
 		dashBuffer -= delta
 		dashBuffer = clamp(dashBuffer, 0, 1)
-
+	
 	if Input.is_action_just_pressed("ui_accept") and dashBuffer == 0 and canDash:
 		if dashCount > 0:
 			dashLeft = dashTime 
+			print("dash!")
 			
 			var xDirection = Input.get_axis("ui_left", "ui_right")
 			var yDirection = Input.get_axis("ui_up", "ui_down")
@@ -88,18 +89,20 @@ func calculateHorizontalVelocity(delta: float) -> void:
 			if xDirection == 0:
 				xDirection = prevDir
 			dashDir = Vector2(xDirection, yDirection)
+			if dashDir == Vector2(0, 0):
+				dashDir = Vector2(prevDir, 0)
 			dashCount -= 1
 		
 	if dashLeft > 0:
 		dashLeft -= delta
 		
 		velocity = dashDir * dashVelocity
+
+				
+				
 		
-		if(dashLeft <= 0):
-			if velocity.y != 0:
-				velocity.y = 0
 	
-	else:
+	elif canWalk:
 		var xDirection = Input.get_axis("ui_left", "ui_right")
 		
 		#velocity if moving on ground
@@ -127,7 +130,7 @@ func calculateHorizontalVelocity(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	if canJump: 
 		calculateYVelocity(delta)
-	if canWalk:
+	if canWalk || canDash:
 		calculateHorizontalVelocity(delta)
 			
 	move_and_slide()

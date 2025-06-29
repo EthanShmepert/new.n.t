@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b05gdp546nbfp"]
+[gd_scene load_steps=6 format=3 uid="uid://b05gdp546nbfp"]
 
+[ext_resource type="Script" uid="uid://ds4k7gxnt56ql" path="res://Player/player_internal_acessor.gd" id="1_ddoul"]
 [ext_resource type="Script" uid="uid://cspp0muss46et" path="res://Scripts/Player_Movement.gd" id="1_q3lat"]
 [ext_resource type="Texture2D" uid="uid://bm3pe5a01d1sx" path="res://Art/MainChar.png" id="2_q3lat"]
 [ext_resource type="Script" uid="uid://bp1xmkekafvfa" path="res://Scripts/Camera.gd" id="3_tok1r"]
@@ -8,6 +9,7 @@
 size = Vector2(660.36, 1037.86)
 
 [node name="Player" type="Node2D"]
+script = ExtResource("1_ddoul")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 physics_interpolation_mode = 1

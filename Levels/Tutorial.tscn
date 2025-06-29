@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://c322jelqikgs6"]
+[gd_scene load_steps=19 format=4 uid="uid://c322jelqikgs6"]
 
 [ext_resource type="Script" uid="uid://jpokggxt0vcs" path="res://Levels/tutorial.gd" id="1_ggrfr"]
 [ext_resource type="PackedScene" uid="uid://b05gdp546nbfp" path="res://Player/Player.tscn" id="2_nhn8q"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://l16nyr4v7uuq" path="res://Art/sign_blank_square.png" id="7_tqhs8"]
 [ext_resource type="Texture2D" uid="uid://dwu3vwluyoyjp" path="res://Art/unfoundAsset.png" id="10_vpak1"]
 [ext_resource type="Script" uid="uid://c7lri0i5efvup" path="res://Levels/sign_dash.gd" id="11_4w4cy"]
+[ext_resource type="Script" uid="uid://s3hv1jw8yofk" path="res://Levels/dashpause_tutorial.gd" id="12_8lhii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tuaq2"]
 texture = ExtResource("3_n00sr")
@@ -38,6 +39,9 @@ size = Vector2(31.7, 31.9)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpak1"]
 size = Vector2(867, 656)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8lhii"]
+size = Vector2(231, 89.5)
+
 [node name="Tutorial" type="Node2D"]
 script = ExtResource("1_ggrfr")
 
@@ -46,7 +50,7 @@ position = Vector2(146, 500)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(5, 5)
-tile_map_data = PackedByteArray("AAABAAgAAAAAAAEAAAACAAgAAAABAAEAAAADAAgAAAABAAEAAAAEAAgAAAACAAEAAAAFAAgAAAABAAEAAAAGAAgAAAACAAEAAAAHAAgAAAADAAEAAAAIAAgAAAABAAEAAAAJAAgAAAACAAEAAAAKAAgAAAADAAEAAAALAAgAAAABAAEAAAAMAAgAAAACAAEAAAANAAgAAAADAAEAAAAOAAgAAAABAAEAAAAPAAgAAAACAAEAAAAQAAgAAAADAAEAAAARAAgAAAABAAEAAAASAAgAAAACAAEAAAAWAAgAAAADAAEAAAAXAAgAAAABAAEAAAAYAAgAAAACAAEAAAAZAAgAAAADAAEAAAAaAAgAAAABAAEAAAAbAAgAAAACAAEAAAAcAAgAAAADAAEAAAAdAAgAAAABAAEAAAAeAAgAAAACAAEAAAAfAAgAAAADAAEAAAAgAAgAAAABAAEAAAAhAAgAAAACAAEAAAAiAAgAAAADAAEAAAAjAAgAAAABAAEAAAAkAAgAAAACAAEAAAAlAAgAAAADAAEAAAAmAAgAAAABAAEAAAAnAAgAAAACAAEAAAAoAAgAAAADAAEAAAApAAgAAAAAAAEAABATAAgAAAABAAEAAAAVAAgAAAACAAEAAAAUAAgAAAABAAEAAAAyAAgAAAAAAAEAAAAzAAgAAAABAAEAAAA0AAgAAAACAAEAAAA1AAgAAAADAAEAAAA2AAgAAAADAAEAAAA3AAgAAAADAAEAAAA5AAgAAAADAAEAAAA4AAgAAAADAAEAAAA6AAgAAAAAAAEAABA=")
+tile_map_data = PackedByteArray("AAABAAgAAAAAAAEAAAACAAgAAAABAAEAAAADAAgAAAABAAEAAAAEAAgAAAACAAEAAAAFAAgAAAABAAEAAAAGAAgAAAACAAEAAAAHAAgAAAADAAEAAAAIAAgAAAABAAEAAAAJAAgAAAACAAEAAAAKAAgAAAADAAEAAAALAAgAAAABAAEAAAAMAAgAAAACAAEAAAANAAgAAAADAAEAAAAOAAgAAAABAAEAAAAPAAgAAAACAAEAAAAQAAgAAAADAAEAAAARAAgAAAABAAEAAAASAAgAAAACAAEAAAAWAAgAAAADAAEAAAAXAAgAAAABAAEAAAAmAAgAAAAAAAEAAAAnAAgAAAACAAEAAAAoAAgAAAADAAEAAAApAAgAAAAAAAEAABATAAgAAAABAAEAAAAVAAgAAAACAAEAAAAUAAgAAAABAAEAAAAyAAgAAAAAAAEAAAAzAAgAAAABAAEAAAA0AAgAAAACAAEAAAA1AAgAAAADAAEAAAA2AAgAAAADAAEAAAA3AAgAAAADAAEAAAA5AAgAAAADAAEAAAA4AAgAAAADAAEAAAA6AAgAAAAAAAEAABAYAAgAAAAAAAEAABAbAAYAAAAAAAEAABAZAAYAAAAAAAEAAAAeAAYAAAAAAAEAAAAgAAYAAAAAAAEAABAfAAYAAAACAAEAAAAaAAYAAAACAAEAAAAiAAcAAAAAAAEAAAAjAAcAAAAAAAEAABA=")
 tile_set = SubResource("TileSet_ixs1y")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -162,7 +166,6 @@ texture = ExtResource("10_vpak1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Car/StaticBody2D"]
 position = Vector2(-0.0499954, -0.0500002)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_4w4cy")
 
 [node name="SIGN_3 - Dash" type="Node2D" parent="."]
@@ -183,7 +186,7 @@ offset_left = 377.0
 offset_top = 355.0
 offset_right = 587.0
 offset_bottom = 479.0
-text = "Looks like the way to [next level] is crowded! Tap the space bar mid air to dash over the sea of students!"
+text = "Looks like the way to [next level] is crowded! Leap for it!!!"
 autowrap_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="SIGN_3 - Dash/Control"]
@@ -210,9 +213,50 @@ position = Vector2(3674, 898)
 scale = Vector2(21, 15)
 texture = ExtResource("10_vpak1")
 
+[node name="Dash Demo" type="Node2D" parent="."]
+position = Vector2(3576, 353)
+
+[node name="Area2D" type="Area2D" parent="Dash Demo"]
+script = ExtResource("12_8lhii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dash Demo/Area2D"]
+position = Vector2(97, 258)
+shape = SubResource("RectangleShape2D_8lhii")
+
+[node name="Control-Dash2" type="Control" parent="Dash Demo"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -414.0
+offset_top = -343.0
+offset_right = -374.0
+offset_bottom = -303.0
+
+[node name="Label" type="Label" parent="Dash Demo/Control-Dash2"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 377.0
+offset_top = 355.0
+offset_right = 587.0
+offset_bottom = 479.0
+text = "This jump is too long... oh yeah...  you're a bird! Hit space mid-air to dash!"
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Dash Demo/Control-Dash2"]
+position = Vector2(478, 411)
+scale = Vector2(0.185263, 0.229091)
+texture = ExtResource("6_o4sb5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Dash Demo/Control-Dash2/Sprite2D"]
+z_index = -1
+position = Vector2(-2.69899, 10.9126)
+scale = Vector2(42.3384, 22.7803)
+texture = ExtResource("7_tqhs8")
+
 [connection signal="body_entered" from="SIGN_1 - Movement/Area2D" to="SIGN_1 - Movement/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="SIGN_1 - Movement/Area2D" to="SIGN_1 - Movement/Area2D" method="_on_body_exited"]
 [connection signal="body_entered" from="SIGN_2 - Jumping/Area2D" to="SIGN_2 - Jumping/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="SIGN_2 - Jumping/Area2D" to="SIGN_2 - Jumping/Area2D" method="_on_body_exited"]
 [connection signal="body_entered" from="SIGN_3 - Dash/Area2D2" to="SIGN_3 - Dash/Area2D2" method="_on_body_entered_dash"]
 [connection signal="body_exited" from="SIGN_3 - Dash/Area2D2" to="SIGN_3 - Dash/Area2D2" method="_on_body_exited"]
+[connection signal="body_entered" from="Dash Demo/Area2D" to="Dash Demo/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Dash Demo/Area2D" to="Dash Demo/Area2D" method="_on_body_exited"]
