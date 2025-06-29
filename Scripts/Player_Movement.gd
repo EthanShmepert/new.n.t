@@ -30,6 +30,8 @@ var dashDir = Vector2(0, 0) #direction dash was started in
 const dashTime = .2 #time dash takes
 const dashVelocity = 1000
 
+var canDash = true
+
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -76,7 +78,7 @@ func calculateHorizontalVelocity(delta: float) -> void:
 		dashBuffer -= delta
 		dashBuffer = clamp(dashBuffer, 0, 1)
 
-	if Input.is_action_just_pressed("ui_accept") and dashBuffer == 0:
+	if Input.is_action_just_pressed("ui_accept") and dashBuffer == 0 and canDash:
 		if dashCount > 0:
 			dashLeft = dashTime 
 			
@@ -109,7 +111,7 @@ func calculateHorizontalVelocity(delta: float) -> void:
 					
 				else:
 					velocity.x += xDirection * pivotOnGroundSpeed
-			velocity.x += xDirection * accelRate
+			velocity.x = clampf(velocity.x + xDirection * accelRate, -maxSpeed, maxSpeed)
 				
 		else:
 			var absSpeed = absf(velocity.x)
@@ -118,7 +120,6 @@ func calculateHorizontalVelocity(delta: float) -> void:
 			velocity.x = absSpeed * sign(velocity.x)
 			
 			
-		velocity.x = clampf(velocity.x, -maxSpeed, maxSpeed)
 		prevDir = xDirection
 		
 	

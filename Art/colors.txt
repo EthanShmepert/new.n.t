@@ -1,0 +1,4 @@
+scrappy: f2f2f2,000000,ffdd00,008544,d1dae6,099e54,ffc20e
+lvl1: cc0e0e,8c0b79,333080,d43a22,201d70,eb6a2f,eb832f,eba32f,e7eb2d,004d26,f5f598,f5f5ce,053b1f,032914
+lucky: f5f5ce,bfbf9b,fafcff,cc0e0e,7d0000,8f8f6f
+platform: 7bb000,a8e61d,cdd627,b05b00,eb800e
