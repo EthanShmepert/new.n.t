@@ -1,17 +1,17 @@
 [gd_scene load_steps=19 format=4 uid="uid://c322jelqikgs6"]
 
-[ext_resource type="Script" uid="uid://jpokggxt0vcs" path="res://Levels/tutorial.gd" id="1_ggrfr"]
+[ext_resource type="Script" uid="uid://jpokggxt0vcs" path="res://Scripts/tutorial.gd" id="1_ggrfr"]
 [ext_resource type="PackedScene" uid="uid://b05gdp546nbfp" path="res://Player/Player.tscn" id="2_nhn8q"]
 [ext_resource type="Texture2D" uid="uid://fc4cycn0lols" path="res://smallerPlatform.png" id="3_n00sr"]
 [ext_resource type="Texture2D" uid="uid://1dq7ngj5aeyg" path="res://Art/tutorial_background_LAYERS/pixil-layer-0.png" id="3_tuaq2"]
 [ext_resource type="Texture2D" uid="uid://csvvwdvkktid1" path="res://Art/tutorial_background_LAYERS/pixil-layer-1.png" id="4_ixs1y"]
 [ext_resource type="Texture2D" uid="uid://bjmlokjv7tmip" path="res://Art/tutorial_background_LAYERS/pixil-layer-2.png" id="5_o4sb5"]
-[ext_resource type="Script" uid="uid://cloypj5w6q6m3" path="res://Levels/sign.gd" id="6_4d44r"]
+[ext_resource type="Script" uid="uid://cloypj5w6q6m3" path="res://Scripts/sign.gd" id="6_4d44r"]
 [ext_resource type="Texture2D" uid="uid://6k5fjawwnyjp" path="res://Art/border.png" id="6_o4sb5"]
 [ext_resource type="Texture2D" uid="uid://l16nyr4v7uuq" path="res://Art/sign_blank_square.png" id="7_tqhs8"]
 [ext_resource type="Texture2D" uid="uid://dwu3vwluyoyjp" path="res://Art/unfoundAsset.png" id="10_vpak1"]
-[ext_resource type="Script" uid="uid://c7lri0i5efvup" path="res://Levels/sign_dash.gd" id="11_4w4cy"]
-[ext_resource type="Script" uid="uid://s3hv1jw8yofk" path="res://Levels/dashpause_tutorial.gd" id="12_8lhii"]
+[ext_resource type="Script" uid="uid://c7lri0i5efvup" path="res://Scripts/sign_dash.gd" id="11_4w4cy"]
+[ext_resource type="Script" uid="uid://s3hv1jw8yofk" path="res://Scripts/dashpause_tutorial.gd" id="12_8lhii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tuaq2"]
 texture = ExtResource("3_n00sr")

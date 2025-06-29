@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://drbpjjb005yfn"]
+
+[ext_resource type="Texture2D" uid="uid://cofv2e153plbk" path="res://Project_UNT-University_Union-Hero_01-scaled.jpg" id="1_wbfu4"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1089.0
+offset_bottom = 608.0
+texture = ExtResource("1_wbfu4")
