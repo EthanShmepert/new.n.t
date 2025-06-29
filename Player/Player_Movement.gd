@@ -17,10 +17,12 @@ var gravityCoeffecient #apply regular gravity or curbed for extended jump
 
 var canJump = true
 var isJumping = false
+var coyoteTime = .2
 
 var canWalk = true
 var isWalking = false
 
+var dashBuffer = .3
 var dashCount = 1
 var isDashing = false
 var dashLeft = 0 #variable to track dash distance measured in ms
@@ -33,8 +35,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func calculateYVelocity(delta: float) -> void:
 	if not is_on_floor():	
+		coyoteTime -= delta
 		
-		if velocity.y < 0:
+		if velocity.y < 0: #is velocity moving upward
 			#hangtimeCoeffecient curves the jump velocity
 			#making gravity slow down near the peak of the jump
 			#does so by equaling one immediately after jump
@@ -60,13 +63,20 @@ func calculateYVelocity(delta: float) -> void:
 			dashCount = 1
 		if isJumping:
 			isJumping = false
-		if is_on_floor() and Input.is_action_just_pressed("ui_accept"):
-			isJumping = true
-			velocity.y -= jumpPower
+		if is_on_floor():
+			coyoteTime = .3
+	if coyoteTime > 0 and Input.is_action_just_pressed("ui_accept"):
+		isJumping = true
+		dashBuffer = .3
+		coyoteTime = 0
+		velocity.y -= jumpPower
 
 func calculateHorizontalVelocity(delta: float) -> void:
-	
-	if Input.is_action_just_pressed("ui_accept") and velocity.y > -(jumpPower - 50):
+	if dashBuffer > 0:
+		dashBuffer -= delta
+		dashBuffer = clamp(dashBuffer, 0, 1)
+
+	if Input.is_action_just_pressed("ui_accept") and dashBuffer == 0:
 		if dashCount > 0:
 			dashLeft = dashTime 
 			
