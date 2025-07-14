@@ -1,15 +1,13 @@
-[gd_scene load_steps=19 format=4 uid="uid://c322jelqikgs6"]
+[gd_scene load_steps=17 format=4 uid="uid://c322jelqikgs6"]
 
 [ext_resource type="Script" uid="uid://jpokggxt0vcs" path="res://Scripts/tutorial.gd" id="1_ggrfr"]
 [ext_resource type="PackedScene" uid="uid://b05gdp546nbfp" path="res://Player/Player.tscn" id="2_nhn8q"]
 [ext_resource type="Texture2D" uid="uid://fc4cycn0lols" path="res://smallerPlatform.png" id="3_n00sr"]
-[ext_resource type="Texture2D" uid="uid://1dq7ngj5aeyg" path="res://Art/tutorial_background_LAYERS/pixil-layer-0.png" id="3_tuaq2"]
-[ext_resource type="Texture2D" uid="uid://csvvwdvkktid1" path="res://Art/tutorial_background_LAYERS/pixil-layer-1.png" id="4_ixs1y"]
-[ext_resource type="Texture2D" uid="uid://bjmlokjv7tmip" path="res://Art/tutorial_background_LAYERS/pixil-layer-2.png" id="5_o4sb5"]
+[ext_resource type="Texture2D" uid="uid://dtn35fiumypg7" path="res://Final_Graphics/tutorial_graphics/tutorial_background_LAYERS/sky.png" id="4_vpak1"]
+[ext_resource type="Texture2D" uid="uid://bggrtgjhfyqjd" path="res://Final_Graphics/tutorial_graphics/tutorial_background_LAYERS/objects.png" id="5_4w4cy"]
 [ext_resource type="Script" uid="uid://cloypj5w6q6m3" path="res://Scripts/sign.gd" id="6_4d44r"]
-[ext_resource type="Texture2D" uid="uid://6k5fjawwnyjp" path="res://Art/border.png" id="6_o4sb5"]
-[ext_resource type="Texture2D" uid="uid://l16nyr4v7uuq" path="res://Art/sign_blank_square.png" id="7_tqhs8"]
-[ext_resource type="Texture2D" uid="uid://dwu3vwluyoyjp" path="res://Art/unfoundAsset.png" id="10_vpak1"]
+[ext_resource type="Texture2D" uid="uid://cmb347kov3818" path="res://Final_Graphics/tutorial_graphics/tutorial_background_LAYERS/trees.png" id="6_8lhii"]
+[ext_resource type="Texture2D" uid="uid://bfdftn0dapy1c" path="res://Final_Graphics/tutorial_graphics/parked car.png" id="8_uwq88"]
 [ext_resource type="Script" uid="uid://c7lri0i5efvup" path="res://Scripts/sign_dash.gd" id="11_4w4cy"]
 [ext_resource type="Script" uid="uid://s3hv1jw8yofk" path="res://Scripts/dashpause_tutorial.gd" id="12_8lhii"]
 
@@ -34,7 +32,7 @@ sources/0 = SubResource("TileSetAtlasSource_tuaq2")
 size = Vector2(675, 653)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4w4cy"]
-size = Vector2(31.7, 31.9)
+size = Vector2(685, 365)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpak1"]
 size = Vector2(867, 656)
@@ -62,21 +60,24 @@ motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(2880, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
-texture = ExtResource("3_tuaq2")
+z_index = -3
+texture = ExtResource("4_vpak1")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(2880, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture = ExtResource("4_ixs1y")
+z_index = -2
+texture = ExtResource("5_4w4cy")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.5, 0.5)
 motion_mirroring = Vector2(2880, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-texture = ExtResource("5_o4sb5")
+z_index = -1
+texture = ExtResource("6_8lhii")
 
 [node name="SIGN_1 - Movement" type="Node2D" parent="."]
 z_index = -10
@@ -102,13 +103,11 @@ autowrap_mode = 2
 [node name="Sprite2D" type="Sprite2D" parent="SIGN_1 - Movement/Control"]
 position = Vector2(478, 411)
 scale = Vector2(0.185263, 0.229091)
-texture = ExtResource("6_o4sb5")
 
 [node name="Sprite2D" type="Sprite2D" parent="SIGN_1 - Movement/Control/Sprite2D"]
 z_index = -1
 position = Vector2(-2.69899, 10.9126)
 scale = Vector2(42.3384, 22.7803)
-texture = ExtResource("7_tqhs8")
 
 [node name="Area2D" type="Area2D" parent="SIGN_1 - Movement"]
 script = ExtResource("6_4d44r")
@@ -142,13 +141,11 @@ autowrap_mode = 2
 [node name="Sprite2D" type="Sprite2D" parent="SIGN_2 - Jumping/Control"]
 position = Vector2(478, 411)
 scale = Vector2(0.185263, 0.229091)
-texture = ExtResource("6_o4sb5")
 
 [node name="Sprite2D" type="Sprite2D" parent="SIGN_2 - Jumping/Control/Sprite2D"]
 z_index = -1
 position = Vector2(-2.69899, 10.9126)
 scale = Vector2(42.3384, 22.7803)
-texture = ExtResource("7_tqhs8")
 
 [node name="Area2D" type="Area2D" parent="SIGN_2 - Jumping"]
 script = ExtResource("6_4d44r")
@@ -158,14 +155,15 @@ position = Vector2(471.5, 324)
 shape = SubResource("RectangleShape2D_tqhs8")
 
 [node name="Car" type="Sprite2D" parent="."]
-position = Vector2(1657, 562)
-scale = Vector2(5, 5)
-texture = ExtResource("10_vpak1")
+position = Vector2(1702, 531)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_uwq88")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Car"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Car/StaticBody2D"]
-position = Vector2(-0.0499954, -0.0500002)
+position = Vector2(-125, 102.5)
+scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_4w4cy")
 
 [node name="SIGN_3 - Dash" type="Node2D" parent="."]
@@ -192,13 +190,11 @@ autowrap_mode = 2
 [node name="Sprite2D" type="Sprite2D" parent="SIGN_3 - Dash/Control"]
 position = Vector2(478, 411)
 scale = Vector2(0.185263, 0.229091)
-texture = ExtResource("6_o4sb5")
 
 [node name="Sprite2D" type="Sprite2D" parent="SIGN_3 - Dash/Control/Sprite2D"]
 z_index = -1
 position = Vector2(-2.69899, 10.9126)
 scale = Vector2(42.3384, 22.7803)
-texture = ExtResource("7_tqhs8")
 
 [node name="Area2D2" type="Area2D" parent="SIGN_3 - Dash"]
 script = ExtResource("11_4w4cy")
@@ -211,7 +207,6 @@ shape = SubResource("RectangleShape2D_vpak1")
 z_index = -10
 position = Vector2(3674, 898)
 scale = Vector2(21, 15)
-texture = ExtResource("10_vpak1")
 
 [node name="Dash Demo" type="Node2D" parent="."]
 position = Vector2(3576, 353)
@@ -244,13 +239,11 @@ autowrap_mode = 2
 [node name="Sprite2D" type="Sprite2D" parent="Dash Demo/Control-Dash2"]
 position = Vector2(478, 411)
 scale = Vector2(0.185263, 0.229091)
-texture = ExtResource("6_o4sb5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Dash Demo/Control-Dash2/Sprite2D"]
 z_index = -1
 position = Vector2(-2.69899, 10.9126)
 scale = Vector2(42.3384, 22.7803)
-texture = ExtResource("7_tqhs8")
 
 [connection signal="body_entered" from="SIGN_1 - Movement/Area2D" to="SIGN_1 - Movement/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="SIGN_1 - Movement/Area2D" to="SIGN_1 - Movement/Area2D" method="_on_body_exited"]

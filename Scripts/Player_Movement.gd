@@ -16,21 +16,13 @@ var gravityCoeffecient #apply regular gravity or curbed for extended jump
 #if necessary in tutorial
 
 var canJump = true
+var jumpsLeft = 4
+var maxJumps = jumpsLeft
 var isJumping = false
 var coyoteTime = .2
 
 var canWalk = true
 var isWalking = false
-
-var dashBuffer = .3
-var dashCount = 1
-var isDashing = false
-var dashLeft = 0 #variable to track dash distance measured in ms
-var dashDir = Vector2(0, 0) #direction dash was started in
-const dashTime = .2 #time dash takes
-const dashVelocity = 800
-
-var canDash = true
 
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -61,48 +53,28 @@ func calculateYVelocity(delta: float) -> void:
 			velocity.y += gravity * 1.75 * delta		
 			
 	else:
-		if dashCount == 0:
-			dashCount = 1
 		if isJumping:
 			isJumping = false
-		if is_on_floor():
-			coyoteTime = .3
-	if coyoteTime > 0 and Input.is_action_just_pressed("ui_accept"):
+		coyoteTime = .3
+		jumpsLeft = 4
+			
+	if Input.is_action_just_pressed("ui_accept") and determineIfCanJump():
 		isJumping = true
-		dashBuffer = .1
 		coyoteTime = 0
-		velocity.y -= jumpPower
+		jumpsLeft -= 1
+		velocity.y -= jumpPower * jumpsLeft / 3 
+		if jumpsLeft < 3:
+			velocity.y -= jumpPower / 3
 
-func calculateHorizontalVelocity(delta: float) -> void:
-	if dashBuffer > 0:
-		dashBuffer -= delta
-		dashBuffer = clamp(dashBuffer, 0, 1)
+func determineIfCanJump() -> bool:
+	if coyoteTime > 0 and jumpsLeft == 4:
+		return true
+	if jumpsLeft > 0:
+		return true
+	return false
 	
-	if Input.is_action_just_pressed("ui_accept") and dashBuffer == 0 and canDash:
-		if dashCount > 0:
-			dashLeft = dashTime 
-			print("dash!")
-			
-			var xDirection = Input.get_axis("ui_left", "ui_right")
-			var yDirection = Input.get_axis("ui_up", "ui_down")
-			
-			if xDirection == 0:
-				xDirection = prevDir
-			dashDir = Vector2(xDirection, yDirection)
-			if dashDir == Vector2(0, 0):
-				dashDir = Vector2(prevDir, 0)
-			dashCount -= 1
-		
-	if dashLeft > 0:
-		dashLeft -= delta
-		
-		velocity = dashDir * dashVelocity
-
-				
-				
-		
-	
-	elif canWalk:
+func calculateHorizontalVelocity(delta: float) -> void:			
+	if canWalk:
 		var xDirection = Input.get_axis("ui_left", "ui_right")
 		
 		#velocity if moving on ground
@@ -130,7 +102,7 @@ func calculateHorizontalVelocity(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	if canJump: 
 		calculateYVelocity(delta)
-	if canWalk || canDash:
+	if canWalk:
 		calculateHorizontalVelocity(delta)
 			
 	move_and_slide()

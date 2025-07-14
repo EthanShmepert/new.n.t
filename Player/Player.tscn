@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ds4k7gxnt56ql" path="res://Scripts/player_internal_acessor.gd" id="1_ddoul"]
 [ext_resource type="Script" uid="uid://cspp0muss46et" path="res://Scripts/Player_Movement.gd" id="1_q3lat"]
-[ext_resource type="Texture2D" uid="uid://bm3pe5a01d1sx" path="res://Art/MainChar.png" id="2_q3lat"]
+[ext_resource type="Texture2D" uid="uid://buflldxon1fkg" path="res://Final_Graphics/Scrappy_Movement/ScrappyMainChar.png" id="3_ddoul"]
 [ext_resource type="Script" uid="uid://bp1xmkekafvfa" path="res://Scripts/Camera.gd" id="3_tok1r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3lat"]
@@ -26,7 +26,7 @@ shape = SubResource("RectangleShape2D_q3lat")
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 texture_filter = 1
 texture_repeat = 2
-texture = ExtResource("2_q3lat")
+texture = ExtResource("3_ddoul")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(6.667, -700)
