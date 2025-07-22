@@ -16,7 +16,7 @@ var gravityCoeffecient #apply regular gravity or curbed for extended jump
 #if necessary in tutorial
 
 var canJump = true
-var jumpsLeft = 4
+var jumpsLeft = 2
 var maxJumps = jumpsLeft
 var isJumping = false
 var coyoteTime = .2
@@ -56,18 +56,16 @@ func calculateYVelocity(delta: float) -> void:
 		if isJumping:
 			isJumping = false
 		coyoteTime = .3
-		jumpsLeft = 4
+		jumpsLeft = 2
 			
 	if Input.is_action_just_pressed("ui_accept") and determineIfCanJump():
 		isJumping = true
 		coyoteTime = 0
 		jumpsLeft -= 1
-		velocity.y -= jumpPower * jumpsLeft / 3 
-		if jumpsLeft < 3:
-			velocity.y -= jumpPower / 3
+		velocity.y -= jumpPower
 
 func determineIfCanJump() -> bool:
-	if coyoteTime > 0 and jumpsLeft == 4:
+	if coyoteTime > 0 and jumpsLeft == 2:
 		return true
 	if jumpsLeft > 0:
 		return true
@@ -99,11 +97,15 @@ func calculateHorizontalVelocity(delta: float) -> void:
 		
 	
 
-func _physics_process(delta: float) -> void:
+func _process(delta: float) -> void:
 	if canJump: 
 		calculateYVelocity(delta)
 	if canWalk:
 		calculateHorizontalVelocity(delta)
-			
+	
+	if is_on_floor() and velocity.x != 0:
+		$Sprite2D/AnimationPlayer.play("Walk")
+	if Input.is_action_just_pressed("ui_accept"):
+		$Sprite2D/AnimationPlayer.play("Jump")
 	move_and_slide()
 	

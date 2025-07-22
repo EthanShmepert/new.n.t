@@ -90,8 +90,9 @@ libraries = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(0, -700)
+position = Vector2(6.667, -700)
 scale = Vector2(6.66667, 6.66667)
+process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 script = ExtResource("3_tok1r")
