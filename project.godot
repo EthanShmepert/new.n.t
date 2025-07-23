@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="new.N.T."
-run/main_scene="uid://ct5fhll0q7cny"
+run/main_scene="uid://1g2f3jfdsi6i"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Art/icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
 
 [global_group]
 

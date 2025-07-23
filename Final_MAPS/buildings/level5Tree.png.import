@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwsnshhk2jktj"
-path="res://.godot/imported/level5Tree.png-59fa3ae526dceff0ec6c1f718b82da99.ctex"
+path="res://.godot/imported/level5Tree.png-46f3c831d0577a961db201454a141a8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://buildings/level5Tree.png"
-dest_files=["res://.godot/imported/level5Tree.png-59fa3ae526dceff0ec6c1f718b82da99.ctex"]
+source_file="res://Final_MAPS/buildings/level5Tree.png"
+dest_files=["res://.godot/imported/level5Tree.png-46f3c831d0577a961db201454a141a8e.ctex"]
 
 [params]
 

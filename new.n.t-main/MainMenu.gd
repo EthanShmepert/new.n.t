@@ -7,7 +7,7 @@ func _ready():
 
 func _on_start_game_pressed():
 	print("Start pressed!")
-	get_tree().change_scene_to_file("res://scenes/Game.tscn")
+	get_tree().change_scene_to_file("res://Menus/final_maps.tscn")
 
 func _on_options_pressed():
 	print("Options pressed!")

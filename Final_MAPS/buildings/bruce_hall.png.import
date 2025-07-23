@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cev20hm1ugiif"
-path="res://.godot/imported/bruce_hall.png-f0a55cdef2342782f2c2bc182ada51cb.ctex"
+path="res://.godot/imported/bruce_hall.png-c144618c79388b9a2858b3cc81377bdb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://buildings/bruce_hall.png"
-dest_files=["res://.godot/imported/bruce_hall.png-f0a55cdef2342782f2c2bc182ada51cb.ctex"]
+source_file="res://Final_MAPS/buildings/bruce_hall.png"
+dest_files=["res://.godot/imported/bruce_hall.png-c144618c79388b9a2858b3cc81377bdb.ctex"]
 
 [params]
 

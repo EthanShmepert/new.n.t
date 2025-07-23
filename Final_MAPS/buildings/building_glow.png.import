@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4wi56b1106e6"
-path="res://.godot/imported/building_glow.png-fef75f73a2cf92fc82f6023a6980dbc7.ctex"
+path="res://.godot/imported/building_glow.png-de2a5d3a0f2ca811c8b049897fdf8295.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://buildings/building_glow.png"
-dest_files=["res://.godot/imported/building_glow.png-fef75f73a2cf92fc82f6023a6980dbc7.ctex"]
+source_file="res://Final_MAPS/buildings/building_glow.png"
+dest_files=["res://.godot/imported/building_glow.png-de2a5d3a0f2ca811c8b049897fdf8295.ctex"]
 
 [params]
 
