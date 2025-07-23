@@ -479,63 +479,63 @@ texture = ExtResource("17_gi6n0")
 
 [node name="Node" type="Node" parent="Control"]
 
-[node name="1" type="TextureRect" parent="Control/Node"]
+[node name="TextureRect" type="TextureRect" parent="Control/Node"]
 offset_left = -219.0
 offset_top = -49.0
 offset_right = -70.0
 offset_bottom = 34.0
 texture = ExtResource("43_khv8c")
 
-[node name="2" type="TextureRect" parent="Control/Node"]
+[node name="TextureRect2" type="TextureRect" parent="Control/Node"]
 offset_left = 503.0
 offset_top = -228.0
 offset_right = 607.0
 offset_bottom = -138.0
 texture = ExtResource("44_ra4yl")
 
-[node name="3" type="TextureRect" parent="Control/Node"]
+[node name="TextureRect3" type="TextureRect" parent="Control/Node"]
 offset_left = 56.0
 offset_top = 49.0
 offset_right = 211.0
 offset_bottom = 135.0
 texture = ExtResource("7_sfwug")
 
-[node name="4" type="TextureRect" parent="Control/Node"]
+[node name="TextureRect4" type="TextureRect" parent="Control/Node"]
 offset_left = 419.0
 offset_top = -58.0
 offset_right = 560.0
 offset_bottom = 24.0
 texture = ExtResource("8_i2ly1")
 
-[node name="5" type="TextureRect" parent="Control/Node"]
+[node name="TextureRect5" type="TextureRect" parent="Control/Node"]
 offset_left = -216.0
 offset_top = -148.0
 offset_right = -73.0
 offset_bottom = -61.0
 texture = ExtResource("9_aqghw")
 
-[node name="6" type="TextureRect" parent="Control/Node"]
+[node name="TextureRect6" type="TextureRect" parent="Control/Node"]
 offset_left = -722.0
 offset_top = -162.0
 offset_right = -529.0
 offset_bottom = -54.0
 texture = ExtResource("10_t8tqn")
 
-[node name="7" type="TextureRect" parent="Control/Node"]
+[node name="TextureRect7" type="TextureRect" parent="Control/Node"]
 offset_left = -533.0
 offset_top = 134.0
 offset_right = -357.0
 offset_bottom = 232.0
 texture = ExtResource("11_jpqv0")
 
-[node name="8" type="TextureRect" parent="Control/Node"]
+[node name="TextureRect8" type="TextureRect" parent="Control/Node"]
 offset_left = -458.0
 offset_top = -309.0
 offset_right = -242.0
 offset_bottom = -189.0
 texture = ExtResource("12_j4hkg")
 
-[node name="9" type="TextureRect" parent="Control/Node"]
+[node name="TextureRect9" type="TextureRect" parent="Control/Node"]
 offset_left = 285.0
 offset_top = 42.0
 offset_right = 452.0
@@ -544,5 +544,3 @@ texture = ExtResource("13_ajwc6")
 
 [node name="Save" type="Node" parent="."]
 script = ExtResource("44_hrwe3")
-
-[connection signal="gui_input" from="Control/Node/1" to="." method="_on_texture_rect_gui_input"]
