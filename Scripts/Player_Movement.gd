@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name mainPlayer
+
 const maxSpeed = 500
 const accelRate = 75
 const deccelRate = 60
@@ -24,8 +26,12 @@ var coyoteTime = .2
 var canWalk = true
 var isWalking = false
 
+var spawnpoints
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+func _ready() -> void:
+	var spawnpoints = get_tree().get_nodes_in_group("spawnpoint")
 
 func calculateYVelocity(delta: float) -> void:
 	if not is_on_floor():	
@@ -107,5 +113,8 @@ func _process(delta: float) -> void:
 		$Sprite2D/AnimationPlayer.play("Walk")
 	if Input.is_action_just_pressed("ui_accept"):
 		$Sprite2D/AnimationPlayer.play("Jump")
+		
+	if position.y > 800:
+		position = get_parent().get_parent().get_node("spawnpoint").global_position
 	move_and_slide()
 	

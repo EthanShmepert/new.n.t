@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctooedskgnjgh"
-path="res://.godot/imported/conveyer_belt.png-deec900a84a401d3e7c50bf8734a02c5.ctex"
+uid="uid://mxm2fpiiw5xw"
+path="res://.godot/imported/TextBox.png-3035f8307ad1df02af2d3f0bc04e9c0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Final_Graphics/level_3_graphics/level_3_graphics/conveyer_belt.png"
-dest_files=["res://.godot/imported/conveyer_belt.png-deec900a84a401d3e7c50bf8734a02c5.ctex"]
+source_file="res://Final_Graphics/level_3_graphics/TextBox.png"
+dest_files=["res://.godot/imported/TextBox.png-3035f8307ad1df02af2d3f0bc04e9c0e.ctex"]
 
 [params]
 

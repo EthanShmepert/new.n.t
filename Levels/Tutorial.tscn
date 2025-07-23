@@ -230,6 +230,8 @@ z_index = -10
 position = Vector2(3674, 898)
 scale = Vector2(21, 15)
 
+[node name="spawnpoint" type="Node2D" parent="." groups=["spawpoint"]]
+
 [connection signal="body_entered" from="SIGN_1 - Movement/Area2D" to="SIGN_1 - Movement/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="SIGN_1 - Movement/Area2D" to="SIGN_1 - Movement/Area2D" method="_on_body_exited"]
 [connection signal="body_entered" from="SIGN_2 - Jumping2/Area2D" to="SIGN_2 - Jumping2/Area2D" method="_on_body_entered"]
