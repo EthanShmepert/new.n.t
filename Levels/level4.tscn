@@ -1,21 +1,20 @@
-[gd_scene load_steps=26 format=3 uid="uid://dkklmjrrt266v"]
+[gd_scene load_steps=25 format=3 uid="uid://dkklmjrrt266v"]
 
-[ext_resource type="PackedScene" uid="uid://b05gdp546nbfp" path="res://Player/Player.tscn" id="1_7emau"]
-[ext_resource type="Texture2D" uid="uid://wnlp85e0vika" path="res://Final_Graphics/level_4_graphics/lvl4_background.png" id="2_a03si"]
-[ext_resource type="Texture2D" uid="uid://b1tbd4l0r8f8n" path="res://Final_Graphics/level_2_graphics/big_computer_LAYERS/black_screen.png" id="3_iwaoi"]
-[ext_resource type="Texture2D" uid="uid://cuht2mav063ll" path="res://Final_Graphics/level_2_graphics/big_computer_LAYERS/submityourscore_words.png" id="4_psjp3"]
-[ext_resource type="Texture2D" uid="uid://tx4civbdesdm" path="res://Final_Graphics/level_2_graphics/big_computer_LAYERS/computer_body.png" id="5_eoslg"]
-[ext_resource type="Texture2D" uid="uid://bhbneywfmh5bj" path="res://Final_Graphics/level_2_graphics/big_computer_LAYERS/screen.png" id="6_0xf1t"]
-[ext_resource type="Texture2D" uid="uid://b5nybcekkqjqj" path="res://Final_Graphics/level_4_graphics/union_platform.png" id="7_5pqm8"]
-[ext_resource type="Script" uid="uid://dwkq2hkow51rh" path="res://enemies.gd" id="8_f0t86"]
-[ext_resource type="Texture2D" uid="uid://cwdivdik0xrqr" path="res://Final_Graphics/level_4_graphics/evil_lucky.png" id="9_rocm8"]
-[ext_resource type="Texture2D" uid="uid://ckmxa7ciway3p" path="res://Final_Graphics/level_4_graphics/big_lucky.png" id="10_gmwyd"]
-[ext_resource type="Texture2D" uid="uid://ct1wxi6tgpwkj" path="res://Final_Graphics/level_4_graphics/lucky.png" id="11_nbdlk"]
-[ext_resource type="Texture2D" uid="uid://dwiw7jso5hti3" path="res://Final_Graphics/button_LAYERS/button_base.png" id="12_ef48p"]
-[ext_resource type="Texture2D" uid="uid://ct03w15g547ks" path="res://Final_Graphics/button_LAYERS/button.png" id="13_a03si"]
-[ext_resource type="Script" uid="uid://bsk86ji8p5i51" path="res://up_down.gd" id="13_gqkj3"]
-[ext_resource type="Texture2D" uid="uid://cmg3o5w5imacc" path="res://Final_Graphics/level_4_graphics/creepy_lucky.png" id="14_veied"]
-[ext_resource type="PackedScene" uid="uid://dpulau0up5voj" path="res://Levels/stairs.tscn" id="15_vsfdw"]
+[ext_resource type="PackedScene" uid="uid://b05gdp546nbfp" path="res://Player/Player.tscn" id="1_eqlos"]
+[ext_resource type="Texture2D" uid="uid://wnlp85e0vika" path="res://Final_Graphics/level_4_graphics/lvl4_background.png" id="2_kdoks"]
+[ext_resource type="Texture2D" uid="uid://b1tbd4l0r8f8n" path="res://Final_Graphics/level_2_graphics/big_computer_LAYERS/black_screen.png" id="3_myfan"]
+[ext_resource type="Texture2D" uid="uid://tx4civbdesdm" path="res://Final_Graphics/level_2_graphics/big_computer_LAYERS/computer_body.png" id="4_fursf"]
+[ext_resource type="Texture2D" uid="uid://cuht2mav063ll" path="res://Final_Graphics/level_2_graphics/big_computer_LAYERS/submityourscore_words.png" id="4_ospb1"]
+[ext_resource type="Texture2D" uid="uid://bhbneywfmh5bj" path="res://Final_Graphics/level_2_graphics/big_computer_LAYERS/screen.png" id="6_ospb1"]
+[ext_resource type="Texture2D" uid="uid://b5nybcekkqjqj" path="res://Final_Graphics/level_4_graphics/union_platform.png" id="7_jktpb"]
+[ext_resource type="Script" uid="uid://dwkq2hkow51rh" path="res://Levels/enemies.gd" id="8_pht4a"]
+[ext_resource type="Texture2D" uid="uid://cwdivdik0xrqr" path="res://Final_Graphics/level_4_graphics/evil_lucky.png" id="10_gbicn"]
+[ext_resource type="Texture2D" uid="uid://ct1wxi6tgpwkj" path="res://Final_Graphics/level_4_graphics/lucky.png" id="11_gbicn"]
+[ext_resource type="Texture2D" uid="uid://ckmxa7ciway3p" path="res://Final_Graphics/level_4_graphics/big_lucky.png" id="12_385lg"]
+[ext_resource type="Script" path="res://Levels/up_down.gd" id="12_cipbp"]
+[ext_resource type="Texture2D" uid="uid://cmg3o5w5imacc" path="res://Final_Graphics/level_4_graphics/creepy_lucky.png" id="13_wnr1e"]
+[ext_resource type="Texture2D" uid="uid://dwiw7jso5hti3" path="res://Final_Graphics/button_LAYERS/button_base.png" id="14_3mtd6"]
+[ext_resource type="PackedScene" uid="uid://dpulau0up5voj" path="res://Levels/stairs.tscn" id="14_gmfd4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fursf"]
 size = Vector2(328.5, 47.75)
@@ -47,15 +46,15 @@ height = 150.0
 
 [node name="level4" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_7emau")]
-position = Vector2(-1371, 215)
+[node name="Player" parent="." instance=ExtResource("1_eqlos")]
+position = Vector2(-1394, 100)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-texture = ExtResource("2_a03si")
+texture = ExtResource("2_kdoks")
 metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -63,19 +62,21 @@ visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2(717, -4)
-texture = ExtResource("3_iwaoi")
+texture = ExtResource("3_myfan")
 
 [node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2(742, 15)
-texture = ExtResource("4_psjp3")
+texture = ExtResource("4_ospb1")
 
 [node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2(697, -2)
-texture = ExtResource("5_eoslg")
+texture = ExtResource("4_fursf")
 
 [node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2(717, -4)
-texture = ExtResource("6_0xf1t")
+texture = ExtResource("6_ospb1")
+
+[node name="Floor" type="StaticBody2D" parent="."]
 
 [node name="Platforms" type="Node2D" parent="."]
 
@@ -84,7 +85,7 @@ texture = ExtResource("6_0xf1t")
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/StaticBody2D"]
 position = Vector2(-1278, 357)
 scale = Vector2(2.34288, 0.907986)
-texture = ExtResource("7_5pqm8")
+texture = ExtResource("7_jktpb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D"]
 position = Vector2(-1277, 357.125)
@@ -95,7 +96,7 @@ shape = SubResource("RectangleShape2D_fursf")
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/StaticBody2D3"]
 position = Vector2(-238, -107)
 scale = Vector2(1.70833, 1)
-texture = ExtResource("7_5pqm8")
+texture = ExtResource("7_jktpb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D3"]
 position = Vector2(-238, -106)
@@ -106,7 +107,7 @@ shape = SubResource("RectangleShape2D_0bnj6")
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/StaticBody2D4"]
 position = Vector2(361, -113)
 scale = Vector2(3.13889, 1)
-texture = ExtResource("7_5pqm8")
+texture = ExtResource("7_jktpb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D4"]
 position = Vector2(361, -113)
@@ -118,21 +119,21 @@ shape = SubResource("RectangleShape2D_gbicn")
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/StaticBody2D5"]
 position = Vector2(1146, -110)
 scale = Vector2(4.15278, 0.916667)
-texture = ExtResource("7_5pqm8")
+texture = ExtResource("7_jktpb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D5"]
 position = Vector2(1147.63, -109)
 shape = SubResource("RectangleShape2D_kdoks")
 
 [node name="Enemies" type="Node2D" parent="."]
-script = ExtResource("8_f0t86")
+script = ExtResource("8_pht4a")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Enemies"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemies/StaticBody2D"]
 position = Vector2(-238, -164)
 scale = Vector2(1, 0.902778)
-texture = ExtResource("9_rocm8")
+texture = ExtResource("10_gbicn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/StaticBody2D"]
 position = Vector2(-240, -168)
@@ -143,7 +144,7 @@ shape = SubResource("CircleShape2D_jktpb")
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6"]
 position = Vector2(489, -191)
 scale = Vector2(1.68056, 1.65278)
-texture = ExtResource("10_gmwyd")
+texture = ExtResource("12_385lg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
 position = Vector2(486, -191)
@@ -154,7 +155,7 @@ shape = SubResource("CircleShape2D_wnr1e")
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D7"]
 position = Vector2(194, -171)
 scale = Vector2(0.120833, 0.0986111)
-texture = ExtResource("11_nbdlk")
+texture = ExtResource("11_gbicn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
 position = Vector2(194, -171)
@@ -165,24 +166,20 @@ shape = SubResource("CircleShape2D_385lg")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D8"]
 position = Vector2(1356, -196)
-texture = ExtResource("12_ef48p")
+texture = ExtResource("14_3mtd6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
 position = Vector2(1355, -148)
 shape = SubResource("RectangleShape2D_213i0")
 
-[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D8"]
-position = Vector2(1357, -198)
-texture = ExtResource("13_a03si")
-
 [node name="Node2D" type="Node2D" parent="."]
-script = ExtResource("13_gqkj3")
+script = ExtResource("12_cipbp")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/StaticBody2D"]
 position = Vector2(1208, -303)
-texture = ExtResource("14_veied")
+texture = ExtResource("13_wnr1e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
 position = Vector2(1220, -309)
@@ -193,16 +190,14 @@ position = Vector2(-1, 3)
 volume_db = -10.0
 autoplay = true
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("15_vsfdw")]
+[node name="StaticBody2D2" parent="." instance=ExtResource("14_gmfd4")]
 position = Vector2(-2, 2)
 
-[node name="StaticBody2D3" parent="." instance=ExtResource("15_vsfdw")]
+[node name="StaticBody2D3" parent="." instance=ExtResource("14_gmfd4")]
 position = Vector2(138, -115)
 
-[node name="StaticBody2D4" parent="." instance=ExtResource("15_vsfdw")]
+[node name="StaticBody2D4" parent="." instance=ExtResource("14_gmfd4")]
 position = Vector2(277, -224)
 
-[node name="StaticBody2D5" parent="." instance=ExtResource("15_vsfdw")]
+[node name="StaticBody2D5" parent="." instance=ExtResource("14_gmfd4")]
 position = Vector2(417, -332)
-
-[node name="spawnpoints" type="Node2D" parent="." groups=["spawpoint"]]

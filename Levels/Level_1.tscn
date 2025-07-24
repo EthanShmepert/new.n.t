@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b8543blabdguk"]
+[gd_scene load_steps=23 format=3 uid="uid://b8543blabdguk"]
 
 [ext_resource type="PackedScene" uid="uid://b05gdp546nbfp" path="res://Player/Player.tscn" id="1_hofu3"]
 [ext_resource type="Texture2D" uid="uid://8yslg65o4jfl" path="res://Final_Graphics/level_1_graphics/Lvl1_background.png" id="2_23710"]
@@ -10,14 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://uo0ptu051d6r" path="res://Final_Graphics/level_1_graphics/desk_girl.png" id="8_yt1os"]
 [ext_resource type="Texture2D" uid="uid://g4o0air7ayji" path="res://Final_Graphics/level_1_graphics/wood_platform.png" id="9_uq6m5"]
 [ext_resource type="Texture2D" uid="uid://cmaqvxh42u0rc" path="res://Final_Graphics/level_1_graphics/small_wood.png" id="10_kfv6s"]
-[ext_resource type="Texture2D" uid="uid://c1mdy7jdshhfh" path="res://Final_Graphics/level_1_graphics/waitlist_LAYERS/numbers.png" id="11_ixldi"]
 [ext_resource type="Texture2D" uid="uid://jl02ydwlkckk" path="res://Final_Graphics/level_1_graphics/advisor_man.png" id="12_87jq1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2ue7"]
 size = Vector2(186, 47)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kagu0"]
-size = Vector2(420.5, 628)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hofu3"]
+size = Vector2(280, 67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ck5ff"]
 size = Vector2(112, 40)
@@ -44,12 +43,12 @@ size = Vector2(222, 65)
 size = Vector2(216, 62)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfgdg"]
-size = Vector2(397.5, 10)
+size = Vector2(397.5, 18)
 
 [node name="levels1root" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_hofu3")]
-position = Vector2(-748, -256)
+position = Vector2(-1413, 108)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -58,29 +57,35 @@ position = Vector2(-748, -256)
 [node name="Level1background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 scale = Vector2(1.024, 1.012)
 texture = ExtResource("2_23710")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+position = Vector2(-845, 73)
+scale = Vector2(0.399206, 0.267073)
+texture = ExtResource("3_nmwl1")
 
 [node name="Waiting Area" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Chair1" type="Sprite2D" parent="ParallaxBackground/Waiting Area"]
+position = Vector2(-1427, 214)
+scale = Vector2(0.107836, 0.104048)
+texture = ExtResource("4_uqtfo")
+
+[node name="Chair2" type="Sprite2D" parent="ParallaxBackground/Waiting Area"]
+position = Vector2(-1342, 211)
+scale = Vector2(0.101918, 0.097893)
+texture = ExtResource("5_6rttb")
+
+[node name="Chair3" type="Sprite2D" parent="ParallaxBackground/Waiting Area"]
+position = Vector2(-1270, 203)
+scale = Vector2(0.0949337, 0.0884233)
+texture = ExtResource("6_2hgpn")
 
 [node name="waitlist" type="Sprite2D" parent="ParallaxBackground/Waiting Area"]
 position = Vector2(-844, 12)
 scale = Vector2(0.400248, 0.309921)
 texture = ExtResource("3_nmwl1")
-metadata/_edit_lock_ = true
-
-[node name="Chair1" type="Sprite2D" parent="ParallaxBackground/Waiting Area"]
-position = Vector2(-1398, -311)
-scale = Vector2(0.107836, 0.104048)
-texture = ExtResource("4_uqtfo")
-
-[node name="Chair2" type="Sprite2D" parent="ParallaxBackground/Waiting Area"]
-position = Vector2(-1301, -329)
-scale = Vector2(0.101918, 0.097893)
-texture = ExtResource("5_6rttb")
-
-[node name="Chair3" type="Sprite2D" parent="ParallaxBackground/Waiting Area"]
-position = Vector2(-1226, -320)
-scale = Vector2(0.0949337, 0.0884233)
-texture = ExtResource("6_2hgpn")
 
 [node name="Desk Girl" type="ParallaxLayer" parent="ParallaxBackground"]
 
@@ -110,20 +115,13 @@ shape = SubResource("RectangleShape2D_h2ue7")
 [node name="StaticBody2D2" type="StaticBody2D" parent="Platforms"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/StaticBody2D2"]
-position = Vector2(-1998, -45)
-scale = Vector2(1.175, 0.937652)
+position = Vector2(-1336, 282)
+scale = Vector2(4.01389, 2.63889)
 texture = ExtResource("10_kfv6s")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Platforms/StaticBody2D2"]
-visible = false
-position = Vector2(-931, -18)
-scale = Vector2(0.940476, 0.986585)
-texture = ExtResource("11_ixldi")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D2"]
-visible = false
-position = Vector2(-864, -68)
-shape = SubResource("RectangleShape2D_kagu0")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Platforms/StaticBody2D2"]
+position = Vector2(-1337, 283.5)
+shape = SubResource("RectangleShape2D_hofu3")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Platforms"]
 
@@ -213,7 +211,7 @@ shape = SubResource("RectangleShape2D_amqe2")
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-800.75, 277)
+position = Vector2(-800.75, 281)
 shape = SubResource("RectangleShape2D_hfgdg")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
