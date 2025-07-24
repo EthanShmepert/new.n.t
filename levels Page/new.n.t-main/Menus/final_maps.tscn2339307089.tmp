@@ -1,0 +1,546 @@
+[gd_scene load_steps=56 format=3 uid="uid://bkqvh34ybyl0j"]
+
+[ext_resource type="Script" uid="uid://oxebdbmaut1l" path="res://Scripts/MapDisplay.gd" id="1_hrwe3"]
+[ext_resource type="Texture2D" uid="uid://buyng7w4nr4xx" path="res://finalMap.png" id="1_iubvs"]
+[ext_resource type="Texture2D" uid="uid://digjt1pvoq2u8" path="res://Final_MAPS/buildings/background.png" id="5_5mxdb"]
+[ext_resource type="Texture2D" uid="uid://cffokk0a53bbk" path="res://Final_MAPS/levels icon/levels1.png" id="5_tup4w"]
+[ext_resource type="Texture2D" uid="uid://ot6ow1m0mspn" path="res://Final_MAPS/buildings/student_service.png" id="6_i2ly1"]
+[ext_resource type="Texture2D" uid="uid://wnobiehajaw8" path="res://Final_MAPS/buildings/arrows.png" id="6_jpqv0"]
+[ext_resource type="Texture2D" uid="uid://c34c46qlu2bf2" path="res://Final_MAPS/levels icon/levels2.png" id="6_tup4w"]
+[ext_resource type="Texture2D" uid="uid://dnbquybos0v23" path="res://Final_MAPS/buildings/roads.png" id="7_j4hkg"]
+[ext_resource type="Texture2D" uid="uid://bu8io6y4jhva" path="res://Final_MAPS/levels icon/level 3.png" id="7_sfwug"]
+[ext_resource type="Texture2D" uid="uid://bgw6agmqysmct" path="res://Final_MAPS/levels icon/level 4.png" id="8_i2ly1"]
+[ext_resource type="Texture2D" uid="uid://cl3ydhv0skdiq" path="res://Final_MAPS/buildings/parking_lot.png" id="8_vr2q6"]
+[ext_resource type="Texture2D" uid="uid://bwg1smasdbinn" path="res://Final_MAPS/levels icon/level 5.png" id="9_aqghw"]
+[ext_resource type="Texture2D" uid="uid://ccp0635e7qsue" path="res://Final_MAPS/levels icon/level 6.png" id="10_t8tqn"]
+[ext_resource type="Texture2D" uid="uid://757btqkigbtk" path="res://Final_MAPS/buildings/level2decor.png" id="11_ajwc6"]
+[ext_resource type="Texture2D" uid="uid://delf73oalknqf" path="res://Final_MAPS/levels icon/level 7.png" id="11_jpqv0"]
+[ext_resource type="Texture2D" uid="uid://limgvhp4qn4x" path="res://Final_MAPS/buildings/service outline.png" id="11_qd0p5"]
+[ext_resource type="Texture2D" uid="uid://gwcwt87up0er" path="res://Final_MAPS/buildings/level2con.png" id="12_3c2bj"]
+[ext_resource type="Texture2D" uid="uid://bd536bkc55ftk" path="res://Final_MAPS/buildings/level3 line.png" id="12_ajwc6"]
+[ext_resource type="Texture2D" uid="uid://dpxh0cg362n82" path="res://Final_MAPS/levels icon/level 8.png" id="12_j4hkg"]
+[ext_resource type="Texture2D" uid="uid://d3pfbpokb861f" path="res://Final_MAPS/levels icon/level 9.png" id="13_ajwc6"]
+[ext_resource type="Texture2D" uid="uid://c3j2w1mcgmcf4" path="res://Final_MAPS/buildings/level4path.png" id="16_85lyk"]
+[ext_resource type="Texture2D" uid="uid://ct40kcnvdbdnm" path="res://Final_MAPS/buildings/union.png" id="17_gi6n0"]
+[ext_resource type="Texture2D" uid="uid://bmy7jrvwvqnl" path="res://Final_MAPS/buildings/10.png" id="17_na40o"]
+[ext_resource type="Texture2D" uid="uid://cfubp5fur8df0" path="res://Final_MAPS/buildings/pathlevel5.png" id="19_trqv6"]
+[ext_resource type="Texture2D" uid="uid://cev20hm1ugiif" path="res://Final_MAPS/buildings/bruce_hall.png" id="20_ti11l"]
+[ext_resource type="Texture2D" uid="uid://b60iwvme15opv" path="res://Final_MAPS/buildings/treeessss.png" id="21_3wthf"]
+[ext_resource type="Texture2D" uid="uid://brldtsve0sxa6" path="res://Final_MAPS/buildings/level5bushes.png" id="22_ka7pr"]
+[ext_resource type="Texture2D" uid="uid://bwcfeijfnkn5i" path="res://Final_MAPS/buildings/12.png" id="22_y20rb"]
+[ext_resource type="Texture2D" uid="uid://bwxowchl4cm6y" path="res://Final_MAPS/buildings/health_building.png" id="24_3wthf"]
+[ext_resource type="Texture2D" uid="uid://dweo7mm4becpn" path="res://Final_MAPS/buildings/level6con.png" id="25_ka7pr"]
+[ext_resource type="Texture2D" uid="uid://beyh1dgucg2rk" path="res://Final_MAPS/buildings/level6tree.png" id="26_ka7pr"]
+[ext_resource type="Texture2D" uid="uid://bqbnsxc81ga4" path="res://Final_MAPS/buildings/rawlins.png" id="28_bt65w"]
+[ext_resource type="Texture2D" uid="uid://dm2i7pjiu4n3j" path="res://Final_MAPS/buildings/2.png" id="28_sob07"]
+[ext_resource type="Texture2D" uid="uid://dj14wvqd7fs5o" path="res://Final_MAPS/buildings/level7con.png" id="29_cv3vd"]
+[ext_resource type="Texture2D" uid="uid://dq8qdud8l2e11" path="res://Final_MAPS/buildings/level8con.png" id="31_cv3vd"]
+[ext_resource type="Texture2D" uid="uid://cm8f58v0clqxc" path="res://Final_MAPS/buildings/level9landmark.png" id="33_p7bt2"]
+[ext_resource type="Texture2D" uid="uid://dii7xl2glbsut" path="res://Final_MAPS/buildings/1.png" id="33_vrh0t"]
+[ext_resource type="Texture2D" uid="uid://jn0ux7ks66bc" path="res://Final_MAPS/buildings/3.png" id="37_0pdh4"]
+[ext_resource type="Script" uid="uid://3o0a84s0hwwv" path="res://Scripts/mapCamera.gd" id="38_m8kj1"]
+[ext_resource type="Texture2D" uid="uid://ccepa82bgm6e1" path="res://Final_Graphics/general_graphics_others/finalMap.png" id="39_x73hh"]
+[ext_resource type="Texture2D" uid="uid://bfjr44f0agrib" path="res://Final_MAPS/buildings/construction.png" id="40_p5ccj"]
+[ext_resource type="Texture2D" uid="uid://cno4g8i7x1qtw" path="res://Final_MAPS/buildings/landmarks.png" id="41_khv8c"]
+[ext_resource type="Texture2D" uid="uid://dfyq08bam82j5" path="res://Final_MAPS/levels icon/level 1.png" id="43_khv8c"]
+[ext_resource type="Script" uid="uid://dnivluyf4tmhv" path="res://Scripts/SaveManager.gd" id="44_hrwe3"]
+[ext_resource type="Texture2D" uid="uid://csynfwqex3auu" path="res://Final_MAPS/levels icon/level 2.png" id="44_ra4yl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_etkhp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfwug"]
+size = Vector2(257, 121)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3c2bj"]
+radius = 83.006
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_85lyk"]
+radius = 70.1142
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gi6n0"]
+radius = 57.0351
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vepy5"]
+radius = 72.1734
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ilb2r"]
+radius = 62.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_trqv6"]
+radius = 61.0328
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ti11l"]
+radius = 65.0308
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3wthf"]
+radius = 61.0328
+
+[node name="FinalMaps" type="Node2D"]
+script = ExtResource("1_hrwe3")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="MapSprite" type="Sprite2D" parent="Node"]
+visible = false
+material = SubResource("ShaderMaterial_etkhp")
+position = Vector2(-4, -10)
+texture = ExtResource("1_iubvs")
+
+[node name="Mask1" type="Sprite2D" parent="Node"]
+visible = false
+position = Vector2(0, 1)
+
+[node name="Level1" type="Area2D" parent="Node"]
+visible = false
+
+[node name="Glowing" type="Sprite2D" parent="Node/Level1"]
+visible = false
+position = Vector2(23, -3)
+scale = Vector2(1.16204, 1.17857)
+
+[node name="GroupBuildings" type="Node2D" parent="Node/Level1"]
+
+[node name="level1background" type="Sprite2D" parent="Node/Level1/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("5_5mxdb")
+
+[node name="Arrows" type="Sprite2D" parent="Node/Level1/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 10
+position = Vector2(-1, -6)
+texture = ExtResource("6_jpqv0")
+
+[node name="Srudent_Service" type="Sprite2D" parent="Node/Level1/GroupBuildings"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1, 6)
+texture = ExtResource("6_i2ly1")
+
+[node name="Roads" type="Sprite2D" parent="Node/Level1/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -5)
+texture = ExtResource("7_j4hkg")
+
+[node name="parking lot" type="Sprite2D" parent="Node/Level1/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("8_vr2q6")
+
+[node name="line3" type="Sprite2D" parent="Node/Level1/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(5, 49)
+texture = ExtResource("12_ajwc6")
+
+[node name="lvl1outline" type="Sprite2D" parent="Node/Level1/GroupBuildings"]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-10, -12)
+texture = ExtResource("11_qd0p5")
+
+[node name="Icons" type="Sprite2D" parent="Node/Level1"]
+position = Vector2(-98, 11)
+texture = ExtResource("5_tup4w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Level1"]
+position = Vector2(-104.5, 11.5)
+shape = SubResource("RectangleShape2D_sfwug")
+
+[node name="Level2" type="Area2D" parent="Node"]
+visible = false
+
+[node name="Glowing" type="Sprite2D" parent="Node/Level2"]
+visible = false
+position = Vector2(735, -178)
+scale = Vector2(1.20811, 1.18448)
+
+[node name="Icons" type="Sprite2D" parent="Node/Level2"]
+position = Vector2(543.25, -189.5)
+scale = Vector2(1.00473, 0.994318)
+texture = ExtResource("6_tup4w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Level2"]
+position = Vector2(520, -190)
+shape = SubResource("CircleShape2D_3c2bj")
+
+[node name="GroupBuildings" type="Node2D" parent="Node/Level2"]
+
+[node name="Sage_hall" type="Sprite2D" parent="Node/Level2/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -9)
+
+[node name="level2Decor" type="Sprite2D" parent="Node/Level2/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(280, -358)
+texture = ExtResource("11_ajwc6")
+
+[node name="level2Con" type="Sprite2D" parent="Node/Level2/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(458, -261)
+texture = ExtResource("12_3c2bj")
+
+[node name="lvl2outline" type="Sprite2D" parent="Node/Level2/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(573, -322)
+texture = ExtResource("17_na40o")
+
+[node name="Level3" type="Area2D" parent="Node"]
+visible = false
+
+[node name="Glowing" type="Sprite2D" parent="Node/Level3"]
+visible = false
+position = Vector2(313, 102)
+scale = Vector2(1.27753, 1.30982)
+
+[node name="Icons" type="Sprite2D" parent="Node/Level3"]
+position = Vector2(131, 88)
+texture = ExtResource("7_sfwug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Level3"]
+position = Vector2(113, 86)
+shape = SubResource("CircleShape2D_85lyk")
+
+[node name="GroupBuldings" type="Node2D" parent="Node/Level3"]
+
+[node name="Level4" type="Area2D" parent="Node"]
+visible = false
+
+[node name="Glowing" type="Sprite2D" parent="Node/Level4"]
+position = Vector2(635, -11)
+scale = Vector2(1.18188, 1.15476)
+
+[node name="Icons" type="Sprite2D" parent="Node/Level4"]
+position = Vector2(481, -21)
+texture = ExtResource("8_i2ly1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Level4"]
+position = Vector2(457, -19)
+shape = SubResource("CircleShape2D_gi6n0")
+
+[node name="GroupBuildings" type="Node2D" parent="Node/Level4"]
+
+[node name="UnionPath" type="Sprite2D" parent="Node/Level4/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(319, -33)
+texture = ExtResource("16_85lyk")
+
+[node name="Union" type="Sprite2D" parent="Node/Level4/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-1, -5)
+texture = ExtResource("17_gi6n0")
+
+[node name="lvl4outline" type="Sprite2D" parent="Node/Level4/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(278, -59)
+texture = ExtResource("22_y20rb")
+
+[node name="Level5" type="Area2D" parent="Node"]
+visible = false
+
+[node name="Glowing" type="Sprite2D" parent="Node/Level5"]
+position = Vector2(47, -98)
+scale = Vector2(1.3254, 1.3631)
+
+[node name="Icons" type="Sprite2D" parent="Node/Level5"]
+position = Vector2(-146, -110)
+texture = ExtResource("9_aqghw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Level5"]
+position = Vector2(-158, -119)
+shape = SubResource("CircleShape2D_vepy5")
+
+[node name="GroupBuildings" type="Node2D" parent="Node/Level5"]
+
+[node name="level5path" type="Sprite2D" parent="Node/Level5/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-84, -206)
+texture = ExtResource("19_trqv6")
+
+[node name="level5buiding" type="Sprite2D" parent="Node/Level5/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-1, -6)
+texture = ExtResource("20_ti11l")
+
+[node name="level5tree" type="Sprite2D" parent="Node/Level5/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(79, -260)
+texture = ExtResource("21_3wthf")
+
+[node name="level5bushes" type="Sprite2D" parent="Node/Level5/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-222, -333)
+texture = ExtResource("22_ka7pr")
+
+[node name="lvl5outline" type="Sprite2D" parent="Node/Level5/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-93, -289)
+texture = ExtResource("28_sob07")
+
+[node name="1" type="Sprite2D" parent="Node/Level5"]
+position = Vector2(1976, 1049)
+texture = ExtResource("33_vrh0t")
+
+[node name="Level6" type="Area2D" parent="Node"]
+visible = false
+
+[node name="Glowing" type="Sprite2D" parent="Node/Level6"]
+position = Vector2(-450, -92)
+scale = Vector2(1.24438, 1.16071)
+
+[node name="Icons" type="Sprite2D" parent="Node/Level6"]
+position = Vector2(-626, -114)
+texture = ExtResource("10_t8tqn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Level6"]
+position = Vector2(-639, -99)
+shape = SubResource("CircleShape2D_ilb2r")
+
+[node name="GroupBuildings" type="Node2D" parent="Node/Level6"]
+
+[node name="level6Buildings" type="Sprite2D" parent="Node/Level6/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-2, -8)
+texture = ExtResource("24_3wthf")
+
+[node name="level6con" type="Sprite2D" parent="Node/Level6/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-531, -38)
+texture = ExtResource("25_ka7pr")
+
+[node name="level6trees" type="Sprite2D" parent="Node/Level6/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-403, -15)
+texture = ExtResource("26_ka7pr")
+
+[node name="lvl6outline" type="Sprite2D" parent="Node/Level6/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-560, -218)
+texture = ExtResource("33_vrh0t")
+
+[node name="Level7" type="Area2D" parent="Node"]
+visible = false
+
+[node name="Glowing" type="Sprite2D" parent="Node/Level7"]
+position = Vector2(-270, 181)
+scale = Vector2(1.22288, 1.28333)
+
+[node name="Icons" type="Sprite2D" parent="Node/Level7"]
+position = Vector2(-445, 177)
+texture = ExtResource("11_jpqv0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Level7"]
+position = Vector2(-459, 170)
+shape = SubResource("CircleShape2D_trqv6")
+
+[node name="GroupBuildings" type="Node2D" parent="Node/Level7"]
+
+[node name="level7Building" type="Sprite2D" parent="Node/Level7/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-1, -5)
+texture = ExtResource("28_bt65w")
+
+[node name="level7con" type="Sprite2D" parent="Node/Level7/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-497, 269)
+texture = ExtResource("29_cv3vd")
+
+[node name="lvl7outline" type="Sprite2D" parent="Node/Level7/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-533, 277)
+texture = ExtResource("37_0pdh4")
+
+[node name="Level8" type="Area2D" parent="Node"]
+visible = false
+
+[node name="Glowing" type="Sprite2D" parent="Node/Level8"]
+position = Vector2(-152, -245)
+scale = Vector2(1.31878, 1.21667)
+
+[node name="Icons" type="Sprite2D" parent="Node/Level8"]
+position = Vector2(-350, -255)
+texture = ExtResource("12_j4hkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Level8"]
+position = Vector2(-355, -252)
+shape = SubResource("CircleShape2D_ti11l")
+
+[node name="GroupBuildings" type="Node2D" parent="Node/Level8"]
+
+[node name="level8con" type="Sprite2D" parent="Node/Level8/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-395, -321)
+texture = ExtResource("31_cv3vd")
+
+[node name="Level9" type="Area2D" parent="Node"]
+visible = false
+
+[node name="Glowing" type="Sprite2D" parent="Node/Level9"]
+position = Vector2(522, 100)
+scale = Vector2(1.16733, 1.13929)
+
+[node name="Icons" type="Sprite2D" parent="Node/Level9"]
+position = Vector2(368, 82)
+texture = ExtResource("13_ajwc6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Level9"]
+position = Vector2(345, 89)
+shape = SubResource("CircleShape2D_3wthf")
+
+[node name="GroupBuildings" type="Node2D" parent="Node/Level9"]
+
+[node name="level9landmark" type="Sprite2D" parent="Node/Level9/GroupBuildings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(221, 168)
+texture = ExtResource("33_p7bt2")
+
+[node name="level9glow" type="Sprite2D" parent="Node/Level9/GroupBuildings"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("38_m8kj1")
+
+[node name="levels3Root" type="Node2D" parent="."]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Buildings" type="AspectRatioContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/Buildings"]
+layout_mode = 2
+texture = ExtResource("39_x73hh")
+
+[node name="BruceHall-Image" type="TextureRect" parent="Control/Buildings"]
+layout_mode = 2
+texture = ExtResource("20_ti11l")
+
+[node name="TextureRect2" type="TextureRect" parent="Control/Buildings"]
+layout_mode = 2
+texture = ExtResource("40_p5ccj")
+
+[node name="TextureRect3" type="TextureRect" parent="Control/Buildings"]
+layout_mode = 2
+texture = ExtResource("24_3wthf")
+
+[node name="TextureRect4" type="TextureRect" parent="Control/Buildings"]
+layout_mode = 2
+texture = ExtResource("41_khv8c")
+
+[node name="TextureRect5" type="TextureRect" parent="Control/Buildings"]
+layout_mode = 2
+texture = ExtResource("8_vr2q6")
+
+[node name="TextureRect6" type="TextureRect" parent="Control/Buildings"]
+layout_mode = 2
+texture = ExtResource("28_bt65w")
+
+[node name="TextureRect7" type="TextureRect" parent="Control/Buildings"]
+layout_mode = 2
+texture = ExtResource("6_i2ly1")
+
+[node name="TextureRect8" type="TextureRect" parent="Control/Buildings"]
+layout_mode = 2
+texture = ExtResource("17_gi6n0")
+
+[node name="Node" type="Node" parent="Control"]
+
+[node name="TextureRect" type="TextureRect" parent="Control/Node"]
+offset_left = -219.0
+offset_top = -49.0
+offset_right = -70.0
+offset_bottom = 34.0
+texture = ExtResource("43_khv8c")
+
+[node name="TextureRect2" type="TextureRect" parent="Control/Node"]
+offset_left = 503.0
+offset_top = -228.0
+offset_right = 607.0
+offset_bottom = -138.0
+texture = ExtResource("44_ra4yl")
+
+[node name="TextureRect3" type="TextureRect" parent="Control/Node"]
+offset_left = 56.0
+offset_top = 49.0
+offset_right = 211.0
+offset_bottom = 135.0
+texture = ExtResource("7_sfwug")
+
+[node name="TextureRect4" type="TextureRect" parent="Control/Node"]
+offset_left = 419.0
+offset_top = -58.0
+offset_right = 560.0
+offset_bottom = 24.0
+texture = ExtResource("8_i2ly1")
+
+[node name="TextureRect5" type="TextureRect" parent="Control/Node"]
+offset_left = -216.0
+offset_top = -148.0
+offset_right = -73.0
+offset_bottom = -61.0
+texture = ExtResource("9_aqghw")
+
+[node name="TextureRect6" type="TextureRect" parent="Control/Node"]
+offset_left = -722.0
+offset_top = -162.0
+offset_right = -529.0
+offset_bottom = -54.0
+texture = ExtResource("10_t8tqn")
+
+[node name="TextureRect7" type="TextureRect" parent="Control/Node"]
+offset_left = -533.0
+offset_top = 134.0
+offset_right = -357.0
+offset_bottom = 232.0
+texture = ExtResource("11_jpqv0")
+
+[node name="TextureRect8" type="TextureRect" parent="Control/Node"]
+offset_left = -458.0
+offset_top = -309.0
+offset_right = -242.0
+offset_bottom = -189.0
+texture = ExtResource("12_j4hkg")
+
+[node name="TextureRect9" type="TextureRect" parent="Control/Node"]
+offset_left = 285.0
+offset_top = 42.0
+offset_right = 452.0
+offset_bottom = 134.0
+texture = ExtResource("13_ajwc6")
+
+[node name="Save" type="Node" parent="."]
+script = ExtResource("44_hrwe3")
