@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpulau0up5voj"]
+
+[ext_resource type="Texture2D" uid="uid://b5rn8byry2353" path="res://Final_Graphics/level_4_graphics/union_stairs.png" id="1_8lthl"]
+
+[node name="StaticBody2D2" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-952, 284)
+scale = Vector2(0.998698, 0.928819)
+texture = ExtResource("1_8lthl")
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(-1011, 313)
+polygon = PackedVector2Array(-10, -10, 33, -11, 33, -51, 80, -51, 80, -92, 129, -92, 129, -46, 105, -46, 104, -26, 83, -26, 83, -5, 61, -5, 61, 15, 39, 15, 39, 36, -11, 35)

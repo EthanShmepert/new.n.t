@@ -1,7 +1,6 @@
-[gd_scene load_steps=56 format=3 uid="uid://bkqvh34ybyl0j"]
+[gd_scene load_steps=55 format=3 uid="uid://bkqvh34ybyl0j"]
 
 [ext_resource type="Script" uid="uid://oxebdbmaut1l" path="res://Scripts/MapDisplay.gd" id="1_hrwe3"]
-[ext_resource type="Texture2D" uid="uid://buyng7w4nr4xx" path="res://finalMap.png" id="1_iubvs"]
 [ext_resource type="Texture2D" uid="uid://digjt1pvoq2u8" path="res://Final_MAPS/buildings/background.png" id="5_5mxdb"]
 [ext_resource type="Texture2D" uid="uid://cffokk0a53bbk" path="res://Final_MAPS/levels icon/levels1.png" id="5_tup4w"]
 [ext_resource type="Texture2D" uid="uid://ot6ow1m0mspn" path="res://Final_MAPS/buildings/student_service.png" id="6_i2ly1"]
@@ -84,7 +83,6 @@ script = ExtResource("1_hrwe3")
 visible = false
 material = SubResource("ShaderMaterial_etkhp")
 position = Vector2(-4, -10)
-texture = ExtResource("1_iubvs")
 
 [node name="Mask1" type="Sprite2D" parent="Node"]
 visible = false
