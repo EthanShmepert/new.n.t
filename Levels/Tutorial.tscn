@@ -1,8 +1,8 @@
-[gd_scene load_steps=16 format=4 uid="uid://c322jelqikgs6"]
+[gd_scene load_steps=17 format=4 uid="uid://c322jelqikgs6"]
 
 [ext_resource type="Script" uid="uid://jpokggxt0vcs" path="res://Scripts/tutorial.gd" id="1_ggrfr"]
 [ext_resource type="PackedScene" uid="uid://b05gdp546nbfp" path="res://Player/Player.tscn" id="2_nhn8q"]
-[ext_resource type="Texture2D" uid="uid://fc4cycn0lols" path="res://smallerPlatform.png" id="3_n00sr"]
+[ext_resource type="Texture2D" uid="uid://7v20rmdiajqm" path="res://Final_Graphics/tutorial_graphics/small_grass.png" id="3_n00sr"]
 [ext_resource type="Texture2D" uid="uid://dtn35fiumypg7" path="res://Final_Graphics/tutorial_graphics/tutorial_background_LAYERS/sky.png" id="4_vpak1"]
 [ext_resource type="Texture2D" uid="uid://bggrtgjhfyqjd" path="res://Final_Graphics/tutorial_graphics/tutorial_background_LAYERS/objects.png" id="5_4w4cy"]
 [ext_resource type="Script" uid="uid://cloypj5w6q6m3" path="res://Scripts/sign.gd" id="6_4d44r"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bfdftn0dapy1c" path="res://Final_Graphics/tutorial_graphics/parked car.png" id="8_uwq88"]
 [ext_resource type="Texture2D" uid="uid://lw3xe6eie7st" path="res://Final_Graphics/tutorial_graphics/excavator.png" id="9_4w4cy"]
 [ext_resource type="Texture2D" uid="uid://c3johuinjwrlc" path="res://Final_Graphics/tutorial_graphics/construction_barrier.png" id="10_8lhii"]
+[ext_resource type="AudioStream" uid="uid://ci6awi8o3gs6u" path="res://2019-08-25_-_8bit-Smooth_Presentation_-_David_Fesliyan.mp3" id="12_8lhii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tuaq2"]
 texture = ExtResource("3_n00sr")
@@ -231,6 +232,12 @@ position = Vector2(3674, 898)
 scale = Vector2(21, 15)
 
 [node name="spawnpoint" type="Node2D" parent="." groups=["spawpoint"]]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_8lhii")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="SIGN_1 - Movement/Area2D" to="SIGN_1 - Movement/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="SIGN_1 - Movement/Area2D" to="SIGN_1 - Movement/Area2D" method="_on_body_exited"]
