@@ -1,0 +1,176 @@
+[gd_scene load_steps=21 format=3 uid="uid://dqk4vvrlc0628"]
+
+[ext_resource type="Texture2D" uid="uid://dng3nhmgka7st" path="res://Final_Graphics/level_2_graphics/lvl2_background.png" id="1_q4d37"]
+[ext_resource type="Texture2D" uid="uid://dv2o72s7gh6xq" path="res://Final_Graphics/level_2_graphics/pixel_platform.png" id="2_jyudl"]
+[ext_resource type="Texture2D" uid="uid://csrwwf2y3obrp" path="res://Final_Graphics/level_2_graphics/computer_2.png" id="3_1n7cm"]
+[ext_resource type="Texture2D" uid="uid://3y18617spqqg" path="res://Final_Graphics/level_2_graphics/computer_1.png" id="3_3djxs"]
+[ext_resource type="Texture2D" uid="uid://ektl817bbcmq" path="res://Final_Graphics/level_2_graphics/computer_3.png" id="4_rlddw"]
+[ext_resource type="PackedScene" uid="uid://b05gdp546nbfp" path="res://Player/Player.tscn" id="5_rlddw"]
+[ext_resource type="Texture2D" uid="uid://tx4civbdesdm" path="res://Final_Graphics/level_2_graphics/big_computer_LAYERS/computer_body.png" id="7_n8hyc"]
+[ext_resource type="Texture2D" uid="uid://bhbneywfmh5bj" path="res://Final_Graphics/level_2_graphics/big_computer_LAYERS/screen.png" id="8_eiivm"]
+[ext_resource type="Texture2D" uid="uid://cuht2mav063ll" path="res://Final_Graphics/level_2_graphics/big_computer_LAYERS/submityourscore_words.png" id="9_p4ecc"]
+[ext_resource type="Texture2D" uid="uid://dwiw7jso5hti3" path="res://Final_Graphics/button_LAYERS/button_base.png" id="10_4x2ic"]
+[ext_resource type="Texture2D" uid="uid://ct03w15g547ks" path="res://Final_Graphics/button_LAYERS/button.png" id="11_576va"]
+[ext_resource type="Script" uid="uid://cr6yum6uie4h7" path="res://Scripts/pencil.gd" id="12_p4ecc"]
+[ext_resource type="Texture2D" uid="uid://tq5dctlg3xff" path="res://Final_Graphics/level_2_graphics/flying_pencil.png" id="13_4x2ic"]
+[ext_resource type="Script" uid="uid://bxjk8lsd85en7" path="res://Scripts/pencil_2.gd" id="14_4x2ic"]
+
+[sub_resource type="TileSet" id="TileSet_rlddw"]
+navigation_layer_0/layers = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlddw"]
+size = Vector2(537, 42.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1n7cm"]
+size = Vector2(250, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8hyc"]
+size = Vector2(1371, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eiivm"]
+size = Vector2(79, 629.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_576va"]
+size = Vector2(128, 40)
+
+[node name="Level_2" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_rlddw")
+
+[node name="Lvl2Background" type="Sprite2D" parent="."]
+position = Vector2(2017, 275.25)
+scale = Vector2(1.89583, 1.50063)
+texture = ExtResource("1_q4d37")
+
+[node name="Computer1" type="Sprite2D" parent="."]
+position = Vector2(287, 494)
+texture = ExtResource("3_3djxs")
+
+[node name="Computer2" type="Sprite2D" parent="."]
+position = Vector2(1012, 361)
+texture = ExtResource("3_1n7cm")
+
+[node name="Computer3" type="Sprite2D" parent="."]
+position = Vector2(444, 493)
+texture = ExtResource("4_rlddw")
+
+[node name="Player" parent="." instance=ExtResource("5_rlddw")]
+position = Vector2(89, 493)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(275.5, 569.5)
+shape = SubResource("RectangleShape2D_rlddw")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(274, 553)
+scale = Vector2(2.8125, 1)
+texture = ExtResource("2_jyudl")
+
+[node name="StaticBody2DSmall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DSmall"]
+position = Vector2(939, 440)
+shape = SubResource("RectangleShape2D_1n7cm")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2DSmall"]
+position = Vector2(939, 423)
+scale = Vector2(1.3125, 1)
+texture = ExtResource("2_jyudl")
+
+[node name="StaticBody2DSmall2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DSmall2"]
+position = Vector2(1362, 318)
+shape = SubResource("RectangleShape2D_1n7cm")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2DSmall2"]
+position = Vector2(1362, 301)
+scale = Vector2(1.3125, 1)
+texture = ExtResource("2_jyudl")
+
+[node name="StaticBody2DSmall3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DSmall3"]
+position = Vector2(1833, 155)
+shape = SubResource("RectangleShape2D_1n7cm")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2DSmall3"]
+position = Vector2(1833, 138)
+scale = Vector2(1.3125, 1)
+texture = ExtResource("2_jyudl")
+
+[node name="StaticBody2DSmall4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DSmall4"]
+position = Vector2(2275, 438)
+shape = SubResource("RectangleShape2D_1n7cm")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2DSmall4"]
+position = Vector2(2275, 421)
+scale = Vector2(1.3125, 1)
+texture = ExtResource("2_jyudl")
+
+[node name="Screen" type="Sprite2D" parent="."]
+position = Vector2(3192, 272)
+texture = ExtResource("8_eiivm")
+
+[node name="SubmityourscoreWords" type="Sprite2D" parent="."]
+position = Vector2(3184, 298)
+texture = ExtResource("9_p4ecc")
+
+[node name="ButtonBase" type="Sprite2D" parent="."]
+position = Vector2(3637, 416)
+texture = ExtResource("10_4x2ic")
+
+[node name="Button" type="Sprite2D" parent="."]
+position = Vector2(3637, 416)
+texture = ExtResource("11_576va")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(3222.5, 516)
+shape = SubResource("RectangleShape2D_n8hyc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(3871.5, 185.75)
+shape = SubResource("RectangleShape2D_eiivm")
+
+[node name="Computer_Body" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(3192, 272)
+texture = ExtResource("7_n8hyc")
+
+[node name="Pencil" type="CharacterBody2D" parent="."]
+script = ExtResource("12_p4ecc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pencil"]
+position = Vector2(2541, 239)
+texture = ExtResource("13_4x2ic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pencil"]
+position = Vector2(2541, 239)
+shape = SubResource("RectangleShape2D_576va")
+
+[node name="Timer" type="Timer" parent="Pencil"]
+
+[node name="Pencil2" type="CharacterBody2D" parent="."]
+script = ExtResource("14_4x2ic")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pencil2"]
+position = Vector2(2540, 73)
+texture = ExtResource("13_4x2ic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pencil2"]
+position = Vector2(2540, 73)
+shape = SubResource("RectangleShape2D_576va")
+
+[node name="StartTimer" type="Timer" parent="Pencil2"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="spawnpoint" type="Node2D" parent="." groups=["spawpoint"]]
+position = Vector2(95, 400)
